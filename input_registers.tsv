@@ -1,0 +1,733 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+4949	Protocol No			uint32be	2				value		false	false
+4951	Protocol ver			uint32sw	2				value		false	false
+4953	Certification version number of ARM software			string	15				value		false	false
+4968	Certification version number of DCP software			string	15				value		false	false
+4989	SN			string	10				value		false	false
+4999	Device type code	Refer to appendix 4.6		uint16be	1				value		false	false
+5000	Nominal Power		kW	uint16be	1	0.1			value		false	false
+5001	Output type	0: Single; 1: 3P4L: 2-3P3L 		uint16be	1				value		false	false
+5002	Daily Output Energy	Power generation of active output (including PV power generation and battery discharge)	kWh	uint16be	1	0.1			value		false	false
+5003	Total Output Energy	Power generation of active output (including PV power generation and battery discharge)	kWh	uint32sw	2	0.1			value		false	false
+5007	Inside Temperature		°C	int16be	1	0.1			value		false	false
+5010	MPPT 1 Voltage		V	uint16be	1	0.1			value		false	false
+5011	MPPT 1 Current		A	uint16be	1	0.1			value		false	false
+5012	MPPT 2 Voltage		V	uint16be	1	0.1			value		false	false
+5013	MPPT 2 Current		A	uint16be	1	0.1			value		false	false
+5014	MPPT 3 Voltage		V	uint16be	1	0.1			value		false	false
+5015	MPPT 3 Current		A	uint16be	1	0.1			value		false	false
+5016	Total DC Power	PV Power	W	uint32sw	2				value		false	false
+5018	A-B line voltage/phase A voltage	Refer to Output type (address: 5001) 0: phase voltage; 1: phase voltage; 2: line voltage 	V	uint16be	1	0.1			value		false	false
+5019	B-C line voltage/phase B voltage	Refer to Output type (address: 5001) 0: phase voltage; 1: phase voltage; 2: line voltage 	V	uint16be	1	0.1			value		false	false
+5020	C-A line voltage/phase C voltage	Refer to Output type (address: 5001) 0: phase voltage; 1: phase voltage; 2: line voltage 	V	uint16be	1	0.1			value		false	false
+5032	Reactive power		var	int32sw	2				value		false	false
+5034	Power factor			int16be	1	0.001			value		false	false
+5035	Grid frequency		Hz	uint16be	1	0.1			value		false	false
+5213	Battery power - Wide range		W	int32sw	2				value		false	false
+5241	Grid Frequency - High precision		Hz	uint16be	1	0.01			value		false	false
+5602	Meter Phase A Active Power		W	int32sw	2				value		false	false
+5604	Meter Phase B Active Power		W	int32sw	2				value		false	false
+5606	Meter Phase C Active Power		W	int32sw	2				value		false	false
+5621	Export limit min		W	uint16be	1	10			value		false	false
+5622	Export limit max		W	uint16be	1	10			value		false	false
+5627	BDC rated power		W	uint16be	1	100			value		false	false
+5630	Battery Current		A	int16be	1	0.1			value		false	false
+5634	Max. Charging Current (BMS)		A	uint16be	1				value		false	false
+5635	Max. Discharging Current (BMS)		A	uint16be	1				value		false	false
+5638	Battery Capacity - High precision		kWh	uint16be	1	0.01			value		false	false
+5638	Battery Power		kWh	uint16be	1	0.01			value		false	false
+5719	Phase A Backup Current		A	int16be	1	0.1			value		false	false
+5720	Phase B Backup Current		A	int16be	1	0.1			value		false	false
+5721	Phase C Backup Current		A	int16be	1	0.1			value		false	false
+5722	Phase A Backup Power		W	int16be	1				value		false	false
+5723	Phase B Backup Power		W	int16be	1				value		false	false
+5724	Phase C Backup Power		W	int16be	1				value		false	false
+5725	Total Backup Power		W	uint32sw	2				value		false	false
+5730	Phase A Backup Voltage		V	uint16be	1	0.1			value		false	false
+5731	Phase B Backup Voltage		V	uint16be	1	0.1			value		false	false
+5732	Phase C Backup Voltage		V	uint16be	1	0.1			value		false	false
+5733	Backup Frequency		Hz	uint16be	1	0.01			value		false	false
+6099	PV Power of today - Day 1		W	uint16be	1				value		false	false
+6100	PV Power of today - Day 2		W	uint16be	1				value		false	false
+6101	PV Power of today - Day 3		W	uint16be	1				value		false	false
+6102	PV Power of today - Day 4		W	uint16be	1				value		false	false
+6103	PV Power of today - Day 5		W	uint16be	1				value		false	false
+6104	PV Power of today - Day 6		W	uint16be	1				value		false	false
+6105	PV Power of today - Day 7		W	uint16be	1				value		false	false
+6106	PV Power of today - Day 8		W	uint16be	1				value		false	false
+6107	PV Power of today - Day 9		W	uint16be	1				value		false	false
+6108	PV Power of today - Day 10		W	uint16be	1				value		false	false
+6109	PV Power of today - Day 11		W	uint16be	1				value		false	false
+6110	PV Power of today - Day 12		W	uint16be	1				value		false	false
+6111	PV Power of today - Day 13		W	uint16be	1				value		false	false
+6112	PV Power of today - Day 14		W	uint16be	1				value		false	false
+6113	PV Power of today - Day 15		W	uint16be	1				value		false	false
+6114	PV Power of today - Day 16		W	uint16be	1				value		false	false
+6115	PV Power of today - Day 17		W	uint16be	1				value		false	false
+6116	PV Power of today - Day 18		W	uint16be	1				value		false	false
+6117	PV Power of today - Day 19		W	uint16be	1				value		false	false
+6118	PV Power of today - Day 20		W	uint16be	1				value		false	false
+6119	PV Power of today - Day 21		W	uint16be	1				value		false	false
+6120	PV Power of today - Day 22		W	uint16be	1				value		false	false
+6121	PV Power of today - Day 23		W	uint16be	1				value		false	false
+6122	PV Power of today - Day 24		W	uint16be	1				value		false	false
+6123	PV Power of today - Day 25		W	uint16be	1				value		false	false
+6124	PV Power of today - Day 26		W	uint16be	1				value		false	false
+6125	PV Power of today - Day 27		W	uint16be	1				value		false	false
+6126	PV Power of today - Day 28		W	uint16be	1				value		false	false
+6127	PV Power of today - Day 29		W	uint16be	1				value		false	false
+6128	PV Power of today - Day 30		W	uint16be	1				value		false	false
+6129	PV Power of today - Day 31		W	uint16be	1				value		false	false
+6130	PV Power of today - Day 32		W	uint16be	1				value		false	false
+6131	PV Power of today - Day 33		W	uint16be	1				value		false	false
+6132	PV Power of today - Day 34		W	uint16be	1				value		false	false
+6133	PV Power of today - Day 35		W	uint16be	1				value		false	false
+6134	PV Power of today - Day 36		W	uint16be	1				value		false	false
+6135	PV Power of today - Day 37		W	uint16be	1				value		false	false
+6136	PV Power of today - Day 38		W	uint16be	1				value		false	false
+6137	PV Power of today - Day 39		W	uint16be	1				value		false	false
+6138	PV Power of today - Day 40		W	uint16be	1				value		false	false
+6139	PV Power of today - Day 41		W	uint16be	1				value		false	false
+6140	PV Power of today - Day 42		W	uint16be	1				value		false	false
+6141	PV Power of today - Day 43		W	uint16be	1				value		false	false
+6142	PV Power of today - Day 44		W	uint16be	1				value		false	false
+6143	PV Power of today - Day 45		W	uint16be	1				value		false	false
+6144	PV Power of today - Day 46		W	uint16be	1				value		false	false
+6145	PV Power of today - Day 47		W	uint16be	1				value		false	false
+6146	PV Power of today - Day 48		W	uint16be	1				value		false	false
+6147	PV Power of today - Day 49		W	uint16be	1				value		false	false
+6148	PV Power of today - Day 50		W	uint16be	1				value		false	false
+6149	PV Power of today - Day 51		W	uint16be	1				value		false	false
+6150	PV Power of today - Day 52		W	uint16be	1				value		false	false
+6151	PV Power of today - Day 53		W	uint16be	1				value		false	false
+6152	PV Power of today - Day 54		W	uint16be	1				value		false	false
+6153	PV Power of today - Day 55		W	uint16be	1				value		false	false
+6154	PV Power of today - Day 56		W	uint16be	1				value		false	false
+6155	PV Power of today - Day 57		W	uint16be	1				value		false	false
+6156	PV Power of today - Day 58		W	uint16be	1				value		false	false
+6157	PV Power of today - Day 59		W	uint16be	1				value		false	false
+6158	PV Power of today - Day 60		W	uint16be	1				value		false	false
+6159	PV Power of today - Day 61		W	uint16be	1				value		false	false
+6160	PV Power of today - Day 62		W	uint16be	1				value		false	false
+6161	PV Power of today - Day 63		W	uint16be	1				value		false	false
+6162	PV Power of today - Day 64		W	uint16be	1				value		false	false
+6163	PV Power of today - Day 65		W	uint16be	1				value		false	false
+6164	PV Power of today - Day 66		W	uint16be	1				value		false	false
+6165	PV Power of today - Day 67		W	uint16be	1				value		false	false
+6166	PV Power of today - Day 68		W	uint16be	1				value		false	false
+6167	PV Power of today - Day 69		W	uint16be	1				value		false	false
+6168	PV Power of today - Day 70		W	uint16be	1				value		false	false
+6169	PV Power of today - Day 71		W	uint16be	1				value		false	false
+6170	PV Power of today - Day 72		W	uint16be	1				value		false	false
+6171	PV Power of today - Day 73		W	uint16be	1				value		false	false
+6172	PV Power of today - Day 74		W	uint16be	1				value		false	false
+6173	PV Power of today - Day 75		W	uint16be	1				value		false	false
+6174	PV Power of today - Day 76		W	uint16be	1				value		false	false
+6175	PV Power of today - Day 77		W	uint16be	1				value		false	false
+6176	PV Power of today - Day 78		W	uint16be	1				value		false	false
+6177	PV Power of today - Day 79		W	uint16be	1				value		false	false
+6178	PV Power of today - Day 80		W	uint16be	1				value		false	false
+6179	PV Power of today - Day 81		W	uint16be	1				value		false	false
+6180	PV Power of today - Day 82		W	uint16be	1				value		false	false
+6181	PV Power of today - Day 83		W	uint16be	1				value		false	false
+6182	PV Power of today - Day 84		W	uint16be	1				value		false	false
+6183	PV Power of today - Day 85		W	uint16be	1				value		false	false
+6184	PV Power of today - Day 86		W	uint16be	1				value		false	false
+6185	PV Power of today - Day 87		W	uint16be	1				value		false	false
+6186	PV Power of today - Day 88		W	uint16be	1				value		false	false
+6187	PV Power of today - Day 89		W	uint16be	1				value		false	false
+6188	PV Power of today - Day 90		W	uint16be	1				value		false	false
+6189	PV Power of today - Day 91		W	uint16be	1				value		false	false
+6190	PV Power of today - Day 92		W	uint16be	1				value		false	false
+6191	PV Power of today - Day 93		W	uint16be	1				value		false	false
+6192	PV Power of today - Day 94		W	uint16be	1				value		false	false
+6193	PV Power of today - Day 95		W	uint16be	1				value		false	false
+6194	PV Power of today - Day 96		W	uint16be	1				value		false	false
+6195	Daily PV energy yields - Day 1		kWh	uint16be	1	0.1			value		false	false
+6196	Daily PV energy yields - Day 2		kWh	uint16be	1	0.1			value		false	false
+6197	Daily PV energy yields - Day 3		kWh	uint16be	1	0.1			value		false	false
+6198	Daily PV energy yields - Day 4		kWh	uint16be	1	0.1			value		false	false
+6199	Daily PV energy yields - Day 5		kWh	uint16be	1	0.1			value		false	false
+6200	Daily PV energy yields - Day 6		kWh	uint16be	1	0.1			value		false	false
+6201	Daily PV energy yields - Day 7		kWh	uint16be	1	0.1			value		false	false
+6202	Daily PV energy yields - Day 8		kWh	uint16be	1	0.1			value		false	false
+6203	Daily PV energy yields - Day 9		kWh	uint16be	1	0.1			value		false	false
+6204	Daily PV energy yields - Day 10		kWh	uint16be	1	0.1			value		false	false
+6205	Daily PV energy yields - Day 11		kWh	uint16be	1	0.1			value		false	false
+6206	Daily PV energy yields - Day 12		kWh	uint16be	1	0.1			value		false	false
+6207	Daily PV energy yields - Day 13		kWh	uint16be	1	0.1			value		false	false
+6208	Daily PV energy yields - Day 14		kWh	uint16be	1	0.1			value		false	false
+6209	Daily PV energy yields - Day 15		kWh	uint16be	1	0.1			value		false	false
+6210	Daily PV energy yields - Day 16		kWh	uint16be	1	0.1			value		false	false
+6211	Daily PV energy yields - Day 17		kWh	uint16be	1	0.1			value		false	false
+6212	Daily PV energy yields - Day 18		kWh	uint16be	1	0.1			value		false	false
+6213	Daily PV energy yields - Day 19		kWh	uint16be	1	0.1			value		false	false
+6214	Daily PV energy yields - Day 20		kWh	uint16be	1	0.1			value		false	false
+6215	Daily PV energy yields - Day 21		kWh	uint16be	1	0.1			value		false	false
+6216	Daily PV energy yields - Day 22		kWh	uint16be	1	0.1			value		false	false
+6217	Daily PV energy yields - Day 23		kWh	uint16be	1	0.1			value		false	false
+6218	Daily PV energy yields - Day 24		kWh	uint16be	1	0.1			value		false	false
+6219	Daily PV energy yields - Day 25		kWh	uint16be	1	0.1			value		false	false
+6220	Daily PV energy yields - Day 26		kWh	uint16be	1	0.1			value		false	false
+6221	Daily PV energy yields - Day 27		kWh	uint16be	1	0.1			value		false	false
+6222	Daily PV energy yields - Day 28		kWh	uint16be	1	0.1			value		false	false
+6223	Daily PV energy yields - Day 29		kWh	uint16be	1	0.1			value		false	false
+6224	Daily PV energy yields - Day 30		kWh	uint16be	1	0.1			value		false	false
+6225	Daily PV energy yields - Day 31		kWh	uint16be	1	0.1			value		false	false
+6226	Monthly PV energy yields - January		kWh	uint16be	1	0.1			value		false	false
+6227	Monthly PV energy yields - February		kWh	uint16be	1	0.1			value		false	false
+6228	Monthly PV energy yields - March		kWh	uint16be	1	0.1			value		false	false
+6229	Monthly PV energy yields - April		kWh	uint16be	1	0.1			value		false	false
+6230	Monthly PV energy yields - May		kWh	uint16be	1	0.1			value		false	false
+6231	Monthly PV energy yields - June		kWh	uint16be	1	0.1			value		false	false
+6232	Monthly PV energy yields - July		kWh	uint16be	1	0.1			value		false	false
+6233	Monthly PV energy yields - August		kWh	uint16be	1	0.1			value		false	false
+6234	Monthly PV energy yields - September		kWh	uint16be	1	0.1			value		false	false
+6235	Monthly PV energy yields - October		kWh	uint16be	1	0.1			value		false	false
+6236	Monthly PV energy yields - November		kWh	uint16be	1	0.1			value		false	false
+6237	Monthly PV energy yields - December		kWh	uint16be	1	0.1			value		false	false
+6249	Yearly PV energy yields - Year 1	2030	kWh	uint32sw	2	0.1			value		false	false
+6251	Yearly PV energy yields - Year 2	2031	kWh	uint32sw	2	0.1			value		false	false
+6253	Yearly PV energy yields - Year 3	2032	kWh	uint32sw	2	0.1			value		false	false
+6255	Yearly PV energy yields - Year 4	2033	kWh	uint32sw	2	0.1			value		false	false
+6257	Yearly PV energy yields - Year 5	2034	kWh	uint32sw	2	0.1			value		false	false
+6259	Yearly PV energy yields - Year 6	2035	kWh	uint32sw	2	0.1			value		false	false
+6261	Yearly PV energy yields - Year 7	2036	kWh	uint32sw	2	0.1			value		false	false
+6263	Yearly PV energy yields - Year 8	2037	kWh	uint32sw	2	0.1			value		false	false
+6265	Yearly PV energy yields - Year 9	2038	kWh	uint32sw	2	0.1			value		false	false
+6267	Yearly PV energy yields - Year 10	2024	kWh	uint32sw	2	0.1			value		false	false
+6269	Yearly PV energy yields - Year 11	2025	kWh	uint32sw	2	0.1			value		false	false
+6271	Yearly PV energy yields - Year 12	2026	kWh	uint32sw	2	0.1			value		false	false
+6273	Yearly PV energy yields - Year 13	2027	kWh	uint32sw	2	0.1			value		false	false
+6275	Yearly PV energy yields - Year 14	2028	kWh	uint32sw	2	0.1			value		false	false
+6277	Yearly PV energy yields - Year 15	2029	kWh	uint32sw	2	0.1			value		false	false
+6279	Yearly PV energy yields - reserved		kWh	uint32sw	2	0.1			value		false	false
+6281	Yearly PV energy yields - reserved		kWh	uint32sw	2	0.1			value		false	false
+6283	Yearly PV energy yields - reserved		kWh	uint32sw	2	0.1			value		false	false
+6285	Yearly PV energy yields - reserved		kWh	uint32sw	2	0.1			value		false	false
+6287	Yearly PV energy yields - reserved		kWh	uint32sw	2	0.1			value		false	false
+6289	Direct power consumption of today from PV - Day 1		W	uint16be	1				value		false	false
+6290	Direct power consumption of today from PV - Day 2		W	uint16be	1				value		false	false
+6291	Direct power consumption of today from PV - Day 3		W	uint16be	1				value		false	false
+6292	Direct power consumption of today from PV - Day 4		W	uint16be	1				value		false	false
+6293	Direct power consumption of today from PV - Day 5		W	uint16be	1				value		false	false
+6294	Direct power consumption of today from PV - Day 6		W	uint16be	1				value		false	false
+6295	Direct power consumption of today from PV - Day 7		W	uint16be	1				value		false	false
+6296	Direct power consumption of today from PV - Day 8		W	uint16be	1				value		false	false
+6297	Direct power consumption of today from PV - Day 9		W	uint16be	1				value		false	false
+6298	Direct power consumption of today from PV - Day 10		W	uint16be	1				value		false	false
+6299	Direct power consumption of today from PV - Day 11		W	uint16be	1				value		false	false
+6300	Direct power consumption of today from PV - Day 12		W	uint16be	1				value		false	false
+6301	Direct power consumption of today from PV - Day 13		W	uint16be	1				value		false	false
+6302	Direct power consumption of today from PV - Day 14		W	uint16be	1				value		false	false
+6303	Direct power consumption of today from PV - Day 15		W	uint16be	1				value		false	false
+6304	Direct power consumption of today from PV - Day 16		W	uint16be	1				value		false	false
+6305	Direct power consumption of today from PV - Day 17		W	uint16be	1				value		false	false
+6306	Direct power consumption of today from PV - Day 18		W	uint16be	1				value		false	false
+6307	Direct power consumption of today from PV - Day 19		W	uint16be	1				value		false	false
+6308	Direct power consumption of today from PV - Day 20		W	uint16be	1				value		false	false
+6309	Direct power consumption of today from PV - Day 21		W	uint16be	1				value		false	false
+6310	Direct power consumption of today from PV - Day 22		W	uint16be	1				value		false	false
+6311	Direct power consumption of today from PV - Day 23		W	uint16be	1				value		false	false
+6312	Direct power consumption of today from PV - Day 24		W	uint16be	1				value		false	false
+6313	Direct power consumption of today from PV - Day 25		W	uint16be	1				value		false	false
+6314	Direct power consumption of today from PV - Day 26		W	uint16be	1				value		false	false
+6315	Direct power consumption of today from PV - Day 27		W	uint16be	1				value		false	false
+6316	Direct power consumption of today from PV - Day 28		W	uint16be	1				value		false	false
+6317	Direct power consumption of today from PV - Day 29		W	uint16be	1				value		false	false
+6318	Direct power consumption of today from PV - Day 30		W	uint16be	1				value		false	false
+6319	Direct power consumption of today from PV - Day 31		W	uint16be	1				value		false	false
+6320	Direct power consumption of today from PV - Day 32		W	uint16be	1				value		false	false
+6321	Direct power consumption of today from PV - Day 33		W	uint16be	1				value		false	false
+6322	Direct power consumption of today from PV - Day 34		W	uint16be	1				value		false	false
+6323	Direct power consumption of today from PV - Day 35		W	uint16be	1				value		false	false
+6324	Direct power consumption of today from PV - Day 36		W	uint16be	1				value		false	false
+6325	Direct power consumption of today from PV - Day 37		W	uint16be	1				value		false	false
+6326	Direct power consumption of today from PV - Day 38		W	uint16be	1				value		false	false
+6327	Direct power consumption of today from PV - Day 39		W	uint16be	1				value		false	false
+6328	Direct power consumption of today from PV - Day 40		W	uint16be	1				value		false	false
+6329	Direct power consumption of today from PV - Day 41		W	uint16be	1				value		false	false
+6330	Direct power consumption of today from PV - Day 42		W	uint16be	1				value		false	false
+6331	Direct power consumption of today from PV - Day 43		W	uint16be	1				value		false	false
+6332	Direct power consumption of today from PV - Day 44		W	uint16be	1				value		false	false
+6333	Direct power consumption of today from PV - Day 45		W	uint16be	1				value		false	false
+6334	Direct power consumption of today from PV - Day 46		W	uint16be	1				value		false	false
+6335	Direct power consumption of today from PV - Day 47		W	uint16be	1				value		false	false
+6336	Direct power consumption of today from PV - Day 48		W	uint16be	1				value		false	false
+6337	Direct power consumption of today from PV - Day 49		W	uint16be	1				value		false	false
+6338	Direct power consumption of today from PV - Day 50		W	uint16be	1				value		false	false
+6339	Direct power consumption of today from PV - Day 51		W	uint16be	1				value		false	false
+6340	Direct power consumption of today from PV - Day 52		W	uint16be	1				value		false	false
+6341	Direct power consumption of today from PV - Day 53		W	uint16be	1				value		false	false
+6342	Direct power consumption of today from PV - Day 54		W	uint16be	1				value		false	false
+6343	Direct power consumption of today from PV - Day 55		W	uint16be	1				value		false	false
+6344	Direct power consumption of today from PV - Day 56		W	uint16be	1				value		false	false
+6345	Direct power consumption of today from PV - Day 57		W	uint16be	1				value		false	false
+6346	Direct power consumption of today from PV - Day 58		W	uint16be	1				value		false	false
+6347	Direct power consumption of today from PV - Day 59		W	uint16be	1				value		false	false
+6348	Direct power consumption of today from PV - Day 60		W	uint16be	1				value		false	false
+6349	Direct power consumption of today from PV - Day 61		W	uint16be	1				value		false	false
+6350	Direct power consumption of today from PV - Day 62		W	uint16be	1				value		false	false
+6351	Direct power consumption of today from PV - Day 63		W	uint16be	1				value		false	false
+6352	Direct power consumption of today from PV - Day 64		W	uint16be	1				value		false	false
+6353	Direct power consumption of today from PV - Day 65		W	uint16be	1				value		false	false
+6354	Direct power consumption of today from PV - Day 66		W	uint16be	1				value		false	false
+6355	Direct power consumption of today from PV - Day 67		W	uint16be	1				value		false	false
+6356	Direct power consumption of today from PV - Day 68		W	uint16be	1				value		false	false
+6357	Direct power consumption of today from PV - Day 69		W	uint16be	1				value		false	false
+6358	Direct power consumption of today from PV - Day 70		W	uint16be	1				value		false	false
+6359	Direct power consumption of today from PV - Day 71		W	uint16be	1				value		false	false
+6360	Direct power consumption of today from PV - Day 72		W	uint16be	1				value		false	false
+6361	Direct power consumption of today from PV - Day 73		W	uint16be	1				value		false	false
+6362	Direct power consumption of today from PV - Day 74		W	uint16be	1				value		false	false
+6363	Direct power consumption of today from PV - Day 75		W	uint16be	1				value		false	false
+6364	Direct power consumption of today from PV - Day 76		W	uint16be	1				value		false	false
+6365	Direct power consumption of today from PV - Day 77		W	uint16be	1				value		false	false
+6366	Direct power consumption of today from PV - Day 78		W	uint16be	1				value		false	false
+6367	Direct power consumption of today from PV - Day 79		W	uint16be	1				value		false	false
+6368	Direct power consumption of today from PV - Day 80		W	uint16be	1				value		false	false
+6369	Direct power consumption of today from PV - Day 81		W	uint16be	1				value		false	false
+6370	Direct power consumption of today from PV - Day 82		W	uint16be	1				value		false	false
+6371	Direct power consumption of today from PV - Day 83		W	uint16be	1				value		false	false
+6372	Direct power consumption of today from PV - Day 84		W	uint16be	1				value		false	false
+6373	Direct power consumption of today from PV - Day 85		W	uint16be	1				value		false	false
+6374	Direct power consumption of today from PV - Day 86		W	uint16be	1				value		false	false
+6375	Direct power consumption of today from PV - Day 87		W	uint16be	1				value		false	false
+6376	Direct power consumption of today from PV - Day 88		W	uint16be	1				value		false	false
+6377	Direct power consumption of today from PV - Day 89		W	uint16be	1				value		false	false
+6378	Direct power consumption of today from PV - Day 90		W	uint16be	1				value		false	false
+6379	Direct power consumption of today from PV - Day 91		W	uint16be	1				value		false	false
+6380	Direct power consumption of today from PV - Day 92		W	uint16be	1				value		false	false
+6381	Direct power consumption of today from PV - Day 93		W	uint16be	1				value		false	false
+6382	Direct power consumption of today from PV - Day 94		W	uint16be	1				value		false	false
+6383	Direct power consumption of today from PV - Day 95		W	uint16be	1				value		false	false
+6384	Direct power consumption of today from PV - Day 96		W	uint16be	1				value		false	false
+6385	Daily direct energy consumption from PV - Day 1		kWh	uint16be	1	0.1			value		false	false
+6386	Daily direct energy consumption from PV - Day 2		kWh	uint16be	1	0.1			value		false	false
+6387	Daily direct energy consumption from PV - Day 3		kWh	uint16be	1	0.1			value		false	false
+6388	Daily direct energy consumption from PV - Day 4		kWh	uint16be	1	0.1			value		false	false
+6389	Daily direct energy consumption from PV - Day 5		kWh	uint16be	1	0.1			value		false	false
+6390	Daily direct energy consumption from PV - Day 6		kWh	uint16be	1	0.1			value		false	false
+6391	Daily direct energy consumption from PV - Day 7		kWh	uint16be	1	0.1			value		false	false
+6392	Daily direct energy consumption from PV - Day 8		kWh	uint16be	1	0.1			value		false	false
+6393	Daily direct energy consumption from PV - Day 9		kWh	uint16be	1	0.1			value		false	false
+6394	Daily direct energy consumption from PV - Day 10		kWh	uint16be	1	0.1			value		false	false
+6395	Daily direct energy consumption from PV - Day 11		kWh	uint16be	1	0.1			value		false	false
+6396	Daily direct energy consumption from PV - Day 12		kWh	uint16be	1	0.1			value		false	false
+6397	Daily direct energy consumption from PV - Day 13		kWh	uint16be	1	0.1			value		false	false
+6398	Daily direct energy consumption from PV - Day 14		kWh	uint16be	1	0.1			value		false	false
+6399	Daily direct energy consumption from PV - Day 15		kWh	uint16be	1	0.1			value		false	false
+6400	Daily direct energy consumption from PV - Day 16		kWh	uint16be	1	0.1			value		false	false
+6401	Daily direct energy consumption from PV - Day 17		kWh	uint16be	1	0.1			value		false	false
+6402	Daily direct energy consumption from PV - Day 18		kWh	uint16be	1	0.1			value		false	false
+6403	Daily direct energy consumption from PV - Day 19		kWh	uint16be	1	0.1			value		false	false
+6404	Daily direct energy consumption from PV - Day 20		kWh	uint16be	1	0.1			value		false	false
+6405	Daily direct energy consumption from PV - Day 21		kWh	uint16be	1	0.1			value		false	false
+6406	Daily direct energy consumption from PV - Day 22		kWh	uint16be	1	0.1			value		false	false
+6407	Daily direct energy consumption from PV - Day 23		kWh	uint16be	1	0.1			value		false	false
+6408	Daily direct energy consumption from PV - Day 24		kWh	uint16be	1	0.1			value		false	false
+6409	Daily direct energy consumption from PV - Day 25		kWh	uint16be	1	0.1			value		false	false
+6410	Daily direct energy consumption from PV - Day 26		kWh	uint16be	1	0.1			value		false	false
+6411	Daily direct energy consumption from PV - Day 27		kWh	uint16be	1	0.1			value		false	false
+6412	Daily direct energy consumption from PV - Day 28		kWh	uint16be	1	0.1			value		false	false
+6413	Daily direct energy consumption from PV - Day 29		kWh	uint16be	1	0.1			value		false	false
+6414	Daily direct energy consumption from PV - Day 30		kWh	uint16be	1	0.1			value		false	false
+6415	Daily direct energy consumption from PV - Day 31		kWh	uint16be	1	0.1			value		false	false
+6416	Monthly direct energy consumption from PV - January		kWh	uint16be	1	0.1			value		false	false
+6417	Monthly direct energy consumption from PV - February		kWh	uint16be	1	0.1			value		false	false
+6418	Monthly direct energy consumption from PV - March		kWh	uint16be	1	0.1			value		false	false
+6419	Monthly direct energy consumption from PV - April		kWh	uint16be	1	0.1			value		false	false
+6420	Monthly direct energy consumption from PV - May		kWh	uint16be	1	0.1			value		false	false
+6421	Monthly direct energy consumption from PV - June		kWh	uint16be	1	0.1			value		false	false
+6422	Monthly direct energy consumption from PV - July		kWh	uint16be	1	0.1			value		false	false
+6423	Monthly direct energy consumption from PV - August		kWh	uint16be	1	0.1			value		false	false
+6424	Monthly direct energy consumption from PV - September		kWh	uint16be	1	0.1			value		false	false
+6425	Monthly direct energy consumption from PV - October		kWh	uint16be	1	0.1			value		false	false
+6426	Monthly direct energy consumption from PV - November		kWh	uint16be	1	0.1			value		false	false
+6427	Monthly direct energy consumption from PV - December		kWh	uint16be	1	0.1			value		false	false
+6428	Yearly direct energy consumption from PV - Year 1	2030	kWh	uint32sw	2	0.1			value		false	false
+6430	Yearly direct energy consumption from PV - Year 2	2031	kWh	uint32sw	2	0.1			value		false	false
+6432	Yearly direct energy consumption from PV - Year 3	2032	kWh	uint32sw	2	0.1			value		false	false
+6434	Yearly direct energy consumption from PV - Year 4	2033	kWh	uint32sw	2	0.1			value		false	false
+6436	Yearly direct energy consumption from PV - Year 5	2034	kWh	uint32sw	2	0.1			value		false	false
+6438	Yearly direct energy consumption from PV - Year 6	2035	kWh	uint32sw	2	0.1			value		false	false
+6440	Yearly direct energy consumption from PV - Year 7	2036	kWh	uint32sw	2	0.1			value		false	false
+6442	Yearly direct energy consumption from PV - Year 8	2037	kWh	uint32sw	2	0.1			value		false	false
+6444	Yearly direct energy consumption from PV - Year 9	2038	kWh	uint32sw	2	0.1			value		false	false
+6446	Yearly direct energy consumption from PV - Year 10	2024	kWh	uint32sw	2	0.1			value		false	false
+6448	Yearly direct energy consumption from PV - Year 11	2025	kWh	uint32sw	2	0.1			value		false	false
+6450	Yearly direct energy consumption from PV - Year 12	2026	kWh	uint32sw	2	0.1			value		false	false
+6452	Yearly direct energy consumption from PV - Year 13	2027	kWh	uint32sw	2	0.1			value		false	false
+6454	Yearly direct energy consumption from PV - Year 14	2028	kWh	uint32sw	2	0.1			value		false	false
+6456	Yearly direct energy consumption from PV - Year 15	2029	kWh	uint32sw	2	0.1			value		false	false
+6458	Yearly direct energy consumption from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6460	Yearly direct energy consumption from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6462	Yearly direct energy consumption from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6464	Yearly direct energy consumption from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6466	Yearly direct energy consumption from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6468	Export power from PV of today - Day 1		W	uint16be	1				value		false	false
+6469	Export power from PV of today - Day 2		W	uint16be	1				value		false	false
+6470	Export power from PV of today - Day 3		W	uint16be	1				value		false	false
+6471	Export power from PV of today - Day 4		W	uint16be	1				value		false	false
+6472	Export power from PV of today - Day 5		W	uint16be	1				value		false	false
+6473	Export power from PV of today - Day 6		W	uint16be	1				value		false	false
+6474	Export power from PV of today - Day 7		W	uint16be	1				value		false	false
+6475	Export power from PV of today - Day 8		W	uint16be	1				value		false	false
+6476	Export power from PV of today - Day 9		W	uint16be	1				value		false	false
+6477	Export power from PV of today - Day 10		W	uint16be	1				value		false	false
+6478	Export power from PV of today - Day 11		W	uint16be	1				value		false	false
+6479	Export power from PV of today - Day 12		W	uint16be	1				value		false	false
+6480	Export power from PV of today - Day 13		W	uint16be	1				value		false	false
+6481	Export power from PV of today - Day 14		W	uint16be	1				value		false	false
+6482	Export power from PV of today - Day 15		W	uint16be	1				value		false	false
+6483	Export power from PV of today - Day 16		W	uint16be	1				value		false	false
+6484	Export power from PV of today - Day 17		W	uint16be	1				value		false	false
+6485	Export power from PV of today - Day 18		W	uint16be	1				value		false	false
+6486	Export power from PV of today - Day 19		W	uint16be	1				value		false	false
+6487	Export power from PV of today - Day 20		W	uint16be	1				value		false	false
+6488	Export power from PV of today - Day 21		W	uint16be	1				value		false	false
+6489	Export power from PV of today - Day 22		W	uint16be	1				value		false	false
+6490	Export power from PV of today - Day 23		W	uint16be	1				value		false	false
+6491	Export power from PV of today - Day 24		W	uint16be	1				value		false	false
+6492	Export power from PV of today - Day 25		W	uint16be	1				value		false	false
+6493	Export power from PV of today - Day 26		W	uint16be	1				value		false	false
+6494	Export power from PV of today - Day 27		W	uint16be	1				value		false	false
+6495	Export power from PV of today - Day 28		W	uint16be	1				value		false	false
+6496	Export power from PV of today - Day 29		W	uint16be	1				value		false	false
+6497	Export power from PV of today - Day 30		W	uint16be	1				value		false	false
+6498	Export power from PV of today - Day 31		W	uint16be	1				value		false	false
+6499	Export power from PV of today - Day 32		W	uint16be	1				value		false	false
+6500	Export power from PV of today - Day 33		W	uint16be	1				value		false	false
+6501	Export power from PV of today - Day 34		W	uint16be	1				value		false	false
+6502	Export power from PV of today - Day 35		W	uint16be	1				value		false	false
+6503	Export power from PV of today - Day 36		W	uint16be	1				value		false	false
+6504	Export power from PV of today - Day 37		W	uint16be	1				value		false	false
+6505	Export power from PV of today - Day 38		W	uint16be	1				value		false	false
+6506	Export power from PV of today - Day 39		W	uint16be	1				value		false	false
+6507	Export power from PV of today - Day 40		W	uint16be	1				value		false	false
+6508	Export power from PV of today - Day 41		W	uint16be	1				value		false	false
+6509	Export power from PV of today - Day 42		W	uint16be	1				value		false	false
+6510	Export power from PV of today - Day 43		W	uint16be	1				value		false	false
+6511	Export power from PV of today - Day 44		W	uint16be	1				value		false	false
+6512	Export power from PV of today - Day 45		W	uint16be	1				value		false	false
+6513	Export power from PV of today - Day 46		W	uint16be	1				value		false	false
+6514	Export power from PV of today - Day 47		W	uint16be	1				value		false	false
+6515	Export power from PV of today - Day 48		W	uint16be	1				value		false	false
+6516	Export power from PV of today - Day 49		W	uint16be	1				value		false	false
+6517	Export power from PV of today - Day 50		W	uint16be	1				value		false	false
+6518	Export power from PV of today - Day 51		W	uint16be	1				value		false	false
+6519	Export power from PV of today - Day 52		W	uint16be	1				value		false	false
+6520	Export power from PV of today - Day 53		W	uint16be	1				value		false	false
+6521	Export power from PV of today - Day 54		W	uint16be	1				value		false	false
+6522	Export power from PV of today - Day 55		W	uint16be	1				value		false	false
+6523	Export power from PV of today - Day 56		W	uint16be	1				value		false	false
+6524	Export power from PV of today - Day 57		W	uint16be	1				value		false	false
+6525	Export power from PV of today - Day 58		W	uint16be	1				value		false	false
+6526	Export power from PV of today - Day 59		W	uint16be	1				value		false	false
+6527	Export power from PV of today - Day 60		W	uint16be	1				value		false	false
+6528	Export power from PV of today - Day 61		W	uint16be	1				value		false	false
+6529	Export power from PV of today - Day 62		W	uint16be	1				value		false	false
+6530	Export power from PV of today - Day 63		W	uint16be	1				value		false	false
+6531	Export power from PV of today - Day 64		W	uint16be	1				value		false	false
+6532	Export power from PV of today - Day 65		W	uint16be	1				value		false	false
+6533	Export power from PV of today - Day 66		W	uint16be	1				value		false	false
+6534	Export power from PV of today - Day 67		W	uint16be	1				value		false	false
+6535	Export power from PV of today - Day 68		W	uint16be	1				value		false	false
+6536	Export power from PV of today - Day 69		W	uint16be	1				value		false	false
+6537	Export power from PV of today - Day 70		W	uint16be	1				value		false	false
+6538	Export power from PV of today - Day 71		W	uint16be	1				value		false	false
+6539	Export power from PV of today - Day 72		W	uint16be	1				value		false	false
+6540	Export power from PV of today - Day 73		W	uint16be	1				value		false	false
+6541	Export power from PV of today - Day 74		W	uint16be	1				value		false	false
+6542	Export power from PV of today - Day 75		W	uint16be	1				value		false	false
+6543	Export power from PV of today - Day 76		W	uint16be	1				value		false	false
+6544	Export power from PV of today - Day 77		W	uint16be	1				value		false	false
+6545	Export power from PV of today - Day 78		W	uint16be	1				value		false	false
+6546	Export power from PV of today - Day 79		W	uint16be	1				value		false	false
+6547	Export power from PV of today - Day 80		W	uint16be	1				value		false	false
+6548	Export power from PV of today - Day 81		W	uint16be	1				value		false	false
+6549	Export power from PV of today - Day 82		W	uint16be	1				value		false	false
+6550	Export power from PV of today - Day 83		W	uint16be	1				value		false	false
+6551	Export power from PV of today - Day 84		W	uint16be	1				value		false	false
+6552	Export power from PV of today - Day 85		W	uint16be	1				value		false	false
+6553	Export power from PV of today - Day 86		W	uint16be	1				value		false	false
+6554	Export power from PV of today - Day 87		W	uint16be	1				value		false	false
+6555	Export power from PV of today - Day 88		W	uint16be	1				value		false	false
+6556	Export power from PV of today - Day 89		W	uint16be	1				value		false	false
+6557	Export power from PV of today - Day 90		W	uint16be	1				value		false	false
+6558	Export power from PV of today - Day 91		W	uint16be	1				value		false	false
+6559	Export power from PV of today - Day 92		W	uint16be	1				value		false	false
+6560	Export power from PV of today - Day 93		W	uint16be	1				value		false	false
+6561	Export power from PV of today - Day 94		W	uint16be	1				value		false	false
+6562	Export power from PV of today - Day 95		W	uint16be	1				value		false	false
+6563	Export power from PV of today - Day 96		W	uint16be	1				value		false	false
+6564	Daily export energy from PV - Day 1		kWh	uint16be	1	0.1			value		false	false
+6565	Daily export energy from PV - Day 2		kWh	uint16be	1	0.1			value		false	false
+6566	Daily export energy from PV - Day 3		kWh	uint16be	1	0.1			value		false	false
+6567	Daily export energy from PV - Day 4		kWh	uint16be	1	0.1			value		false	false
+6568	Daily export energy from PV - Day 5		kWh	uint16be	1	0.1			value		false	false
+6569	Daily export energy from PV - Day 6		kWh	uint16be	1	0.1			value		false	false
+6570	Daily export energy from PV - Day 7		kWh	uint16be	1	0.1			value		false	false
+6571	Daily export energy from PV - Day 8		kWh	uint16be	1	0.1			value		false	false
+6572	Daily export energy from PV - Day 9		kWh	uint16be	1	0.1			value		false	false
+6573	Daily export energy from PV - Day 10		kWh	uint16be	1	0.1			value		false	false
+6574	Daily export energy from PV - Day 11		kWh	uint16be	1	0.1			value		false	false
+6575	Daily export energy from PV - Day 12		kWh	uint16be	1	0.1			value		false	false
+6576	Daily export energy from PV - Day 13		kWh	uint16be	1	0.1			value		false	false
+6577	Daily export energy from PV - Day 14		kWh	uint16be	1	0.1			value		false	false
+6578	Daily export energy from PV - Day 15		kWh	uint16be	1	0.1			value		false	false
+6579	Daily export energy from PV - Day 16		kWh	uint16be	1	0.1			value		false	false
+6580	Daily export energy from PV - Day 17		kWh	uint16be	1	0.1			value		false	false
+6581	Daily export energy from PV - Day 18		kWh	uint16be	1	0.1			value		false	false
+6582	Daily export energy from PV - Day 19		kWh	uint16be	1	0.1			value		false	false
+6583	Daily export energy from PV - Day 20		kWh	uint16be	1	0.1			value		false	false
+6584	Daily export energy from PV - Day 21		kWh	uint16be	1	0.1			value		false	false
+6585	Daily export energy from PV - Day 22		kWh	uint16be	1	0.1			value		false	false
+6586	Daily export energy from PV - Day 23		kWh	uint16be	1	0.1			value		false	false
+6587	Daily export energy from PV - Day 24		kWh	uint16be	1	0.1			value		false	false
+6588	Daily export energy from PV - Day 25		kWh	uint16be	1	0.1			value		false	false
+6589	Daily export energy from PV - Day 26		kWh	uint16be	1	0.1			value		false	false
+6590	Daily export energy from PV - Day 27		kWh	uint16be	1	0.1			value		false	false
+6591	Daily export energy from PV - Day 28		kWh	uint16be	1	0.1			value		false	false
+6592	Daily export energy from PV - Day 29		kWh	uint16be	1	0.1			value		false	false
+6593	Daily export energy from PV - Day 30		kWh	uint16be	1	0.1			value		false	false
+6594	Daily export energy from PV - Day 31		kWh	uint16be	1	0.1			value		false	false
+6595	Monthly export energy from PV - January		kWh	uint16be	1	0.1			value		false	false
+6596	Monthly export energy from PV - February		kWh	uint16be	1	0.1			value		false	false
+6597	Monthly export energy from PV - March		kWh	uint16be	1	0.1			value		false	false
+6598	Monthly export energy from PV - April		kWh	uint16be	1	0.1			value		false	false
+6599	Monthly export energy from PV - May		kWh	uint16be	1	0.1			value		false	false
+6600	Monthly export energy from PV - June		kWh	uint16be	1	0.1			value		false	false
+6601	Monthly export energy from PV - July		kWh	uint16be	1	0.1			value		false	false
+6602	Monthly export energy from PV - August		kWh	uint16be	1	0.1			value		false	false
+6603	Monthly export energy from PV - September		kWh	uint16be	1	0.1			value		false	false
+6604	Monthly export energy from PV - October		kWh	uint16be	1	0.1			value		false	false
+6605	Monthly export energy from PV - November		kWh	uint16be	1	0.1			value		false	false
+6606	Monthly export energy from PV - December		kWh	uint16be	1	0.1			value		false	false
+6607	Yearly export energy from PV - Year 1	2030	kWh	uint32sw	2	0.1			value		false	false
+6609	Yearly export energy from PV - Year 2	2031	kWh	uint32sw	2	0.1			value		false	false
+6611	Yearly export energy from PV - Year 3	2032	kWh	uint32sw	2	0.1			value		false	false
+6613	Yearly export energy from PV - Year 4	2033	kWh	uint32sw	2	0.1			value		false	false
+6615	Yearly export energy from PV - Year 5	2034	kWh	uint32sw	2	0.1			value		false	false
+6617	Yearly export energy from PV - Year 6	2035	kWh	uint32sw	2	0.1			value		false	false
+6619	Yearly export energy from PV - Year 7	2036	kWh	uint32sw	2	0.1			value		false	false
+6621	Yearly export energy from PV - Year 8	2037	kWh	uint32sw	2	0.1			value		false	false
+6623	Yearly export energy from PV - Year 9	2038	kWh	uint32sw	2	0.1			value		false	false
+6625	Yearly export energy from PV - Year 10	2024	kWh	uint32sw	2	0.1			value		false	false
+6627	Yearly export energy from PV - Year 11	2025	kWh	uint32sw	2	0.1			value		false	false
+6629	Yearly export energy from PV - Year 12	2026	kWh	uint32sw	2	0.1			value		false	false
+6631	Yearly export energy from PV - Year 13	2027	kWh	uint32sw	2	0.1			value		false	false
+6633	Yearly export energy from PV - Year 14	2028	kWh	uint32sw	2	0.1			value		false	false
+6635	Yearly export energy from PV - Year 15	2029	kWh	uint32sw	2	0.1			value		false	false
+6637	Yearly export energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6639	Yearly export energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6641	Yearly export energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6643	Yearly export energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6645	Yearly export energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6647	Battery charge power of today - Day 1		W	uint16be	1				value		false	false
+6648	Battery charge power of today - Day 2		W	uint16be	1				value		false	false
+6649	Battery charge power of today - Day 3		W	uint16be	1				value		false	false
+6650	Battery charge power of today - Day 4		W	uint16be	1				value		false	false
+6651	Battery charge power of today - Day 5		W	uint16be	1				value		false	false
+6652	Battery charge power of today - Day 6		W	uint16be	1				value		false	false
+6653	Battery charge power of today - Day 7		W	uint16be	1				value		false	false
+6654	Battery charge power of today - Day 8		W	uint16be	1				value		false	false
+6655	Battery charge power of today - Day 9		W	uint16be	1				value		false	false
+6656	Battery charge power of today - Day 10		W	uint16be	1				value		false	false
+6657	Battery charge power of today - Day 11		W	uint16be	1				value		false	false
+6658	Battery charge power of today - Day 12		W	uint16be	1				value		false	false
+6659	Battery charge power of today - Day 13		W	uint16be	1				value		false	false
+6660	Battery charge power of today - Day 14		W	uint16be	1				value		false	false
+6661	Battery charge power of today - Day 15		W	uint16be	1				value		false	false
+6662	Battery charge power of today - Day 16		W	uint16be	1				value		false	false
+6663	Battery charge power of today - Day 17		W	uint16be	1				value		false	false
+6664	Battery charge power of today - Day 18		W	uint16be	1				value		false	false
+6665	Battery charge power of today - Day 19		W	uint16be	1				value		false	false
+6666	Battery charge power of today - Day 20		W	uint16be	1				value		false	false
+6667	Battery charge power of today - Day 21		W	uint16be	1				value		false	false
+6668	Battery charge power of today - Day 22		W	uint16be	1				value		false	false
+6669	Battery charge power of today - Day 23		W	uint16be	1				value		false	false
+6670	Battery charge power of today - Day 24		W	uint16be	1				value		false	false
+6671	Battery charge power of today - Day 25		W	uint16be	1				value		false	false
+6672	Battery charge power of today - Day 26		W	uint16be	1				value		false	false
+6673	Battery charge power of today - Day 27		W	uint16be	1				value		false	false
+6674	Battery charge power of today - Day 28		W	uint16be	1				value		false	false
+6675	Battery charge power of today - Day 29		W	uint16be	1				value		false	false
+6676	Battery charge power of today - Day 30		W	uint16be	1				value		false	false
+6677	Battery charge power of today - Day 31		W	uint16be	1				value		false	false
+6678	Battery charge power of today - Day 32		W	uint16be	1				value		false	false
+6679	Battery charge power of today - Day 33		W	uint16be	1				value		false	false
+6680	Battery charge power of today - Day 34		W	uint16be	1				value		false	false
+6681	Battery charge power of today - Day 35		W	uint16be	1				value		false	false
+6682	Battery charge power of today - Day 36		W	uint16be	1				value		false	false
+6683	Battery charge power of today - Day 37		W	uint16be	1				value		false	false
+6684	Battery charge power of today - Day 38		W	uint16be	1				value		false	false
+6685	Battery charge power of today - Day 39		W	uint16be	1				value		false	false
+6686	Battery charge power of today - Day 40		W	uint16be	1				value		false	false
+6687	Battery charge power of today - Day 41		W	uint16be	1				value		false	false
+6688	Battery charge power of today - Day 42		W	uint16be	1				value		false	false
+6689	Battery charge power of today - Day 43		W	uint16be	1				value		false	false
+6690	Battery charge power of today - Day 44		W	uint16be	1				value		false	false
+6691	Battery charge power of today - Day 45		W	uint16be	1				value		false	false
+6692	Battery charge power of today - Day 46		W	uint16be	1				value		false	false
+6693	Battery charge power of today - Day 47		W	uint16be	1				value		false	false
+6694	Battery charge power of today - Day 48		W	uint16be	1				value		false	false
+6695	Battery charge power of today - Day 49		W	uint16be	1				value		false	false
+6696	Battery charge power of today - Day 50		W	uint16be	1				value		false	false
+6697	Battery charge power of today - Day 51		W	uint16be	1				value		false	false
+6698	Battery charge power of today - Day 52		W	uint16be	1				value		false	false
+6699	Battery charge power of today - Day 53		W	uint16be	1				value		false	false
+6700	Battery charge power of today - Day 54		W	uint16be	1				value		false	false
+6701	Battery charge power of today - Day 55		W	uint16be	1				value		false	false
+6702	Battery charge power of today - Day 56		W	uint16be	1				value		false	false
+6703	Battery charge power of today - Day 57		W	uint16be	1				value		false	false
+6704	Battery charge power of today - Day 58		W	uint16be	1				value		false	false
+6705	Battery charge power of today - Day 59		W	uint16be	1				value		false	false
+6706	Battery charge power of today - Day 60		W	uint16be	1				value		false	false
+6707	Battery charge power of today - Day 61		W	uint16be	1				value		false	false
+6708	Battery charge power of today - Day 62		W	uint16be	1				value		false	false
+6709	Battery charge power of today - Day 63		W	uint16be	1				value		false	false
+6710	Battery charge power of today - Day 64		W	uint16be	1				value		false	false
+6711	Battery charge power of today - Day 65		W	uint16be	1				value		false	false
+6712	Battery charge power of today - Day 66		W	uint16be	1				value		false	false
+6713	Battery charge power of today - Day 67		W	uint16be	1				value		false	false
+6714	Battery charge power of today - Day 68		W	uint16be	1				value		false	false
+6715	Battery charge power of today - Day 69		W	uint16be	1				value		false	false
+6716	Battery charge power of today - Day 70		W	uint16be	1				value		false	false
+6717	Battery charge power of today - Day 71		W	uint16be	1				value		false	false
+6718	Battery charge power of today - Day 72		W	uint16be	1				value		false	false
+6719	Battery charge power of today - Day 73		W	uint16be	1				value		false	false
+6720	Battery charge power of today - Day 74		W	uint16be	1				value		false	false
+6721	Battery charge power of today - Day 75		W	uint16be	1				value		false	false
+6722	Battery charge power of today - Day 76		W	uint16be	1				value		false	false
+6723	Battery charge power of today - Day 77		W	uint16be	1				value		false	false
+6724	Battery charge power of today - Day 78		W	uint16be	1				value		false	false
+6725	Battery charge power of today - Day 79		W	uint16be	1				value		false	false
+6726	Battery charge power of today - Day 80		W	uint16be	1				value		false	false
+6727	Battery charge power of today - Day 81		W	uint16be	1				value		false	false
+6728	Battery charge power of today - Day 82		W	uint16be	1				value		false	false
+6729	Battery charge power of today - Day 83		W	uint16be	1				value		false	false
+6730	Battery charge power of today - Day 84		W	uint16be	1				value		false	false
+6731	Battery charge power of today - Day 85		W	uint16be	1				value		false	false
+6732	Battery charge power of today - Day 86		W	uint16be	1				value		false	false
+6733	Battery charge power of today - Day 87		W	uint16be	1				value		false	false
+6734	Battery charge power of today - Day 88		W	uint16be	1				value		false	false
+6735	Battery charge power of today - Day 89		W	uint16be	1				value		false	false
+6736	Battery charge power of today - Day 90		W	uint16be	1				value		false	false
+6737	Battery charge power of today - Day 91		W	uint16be	1				value		false	false
+6738	Battery charge power of today - Day 92		W	uint16be	1				value		false	false
+6739	Battery charge power of today - Day 93		W	uint16be	1				value		false	false
+6740	Battery charge power of today - Day 94		W	uint16be	1				value		false	false
+6741	Battery charge power of today - Day 95		W	uint16be	1				value		false	false
+6742	Battery charge power of today - Day 96		W	uint16be	1				value		false	false
+6743	Daily battery charge energy from PV - Day 1		kWh	uint16be	1	0.1			value		false	false
+6744	Daily battery charge energy from PV - Day 2		kWh	uint16be	1	0.1			value		false	false
+6745	Daily battery charge energy from PV - Day 3		kWh	uint16be	1	0.1			value		false	false
+6746	Daily battery charge energy from PV - Day 4		kWh	uint16be	1	0.1			value		false	false
+6747	Daily battery charge energy from PV - Day 5		kWh	uint16be	1	0.1			value		false	false
+6748	Daily battery charge energy from PV - Day 6		kWh	uint16be	1	0.1			value		false	false
+6749	Daily battery charge energy from PV - Day 7		kWh	uint16be	1	0.1			value		false	false
+6750	Daily battery charge energy from PV - Day 8		kWh	uint16be	1	0.1			value		false	false
+6751	Daily battery charge energy from PV - Day 9		kWh	uint16be	1	0.1			value		false	false
+6752	Daily battery charge energy from PV - Day 10		kWh	uint16be	1	0.1			value		false	false
+6753	Daily battery charge energy from PV - Day 11		kWh	uint16be	1	0.1			value		false	false
+6754	Daily battery charge energy from PV - Day 12		kWh	uint16be	1	0.1			value		false	false
+6755	Daily battery charge energy from PV - Day 13		kWh	uint16be	1	0.1			value		false	false
+6756	Daily battery charge energy from PV - Day 14		kWh	uint16be	1	0.1			value		false	false
+6757	Daily battery charge energy from PV - Day 15		kWh	uint16be	1	0.1			value		false	false
+6758	Daily battery charge energy from PV - Day 16		kWh	uint16be	1	0.1			value		false	false
+6759	Daily battery charge energy from PV - Day 17		kWh	uint16be	1	0.1			value		false	false
+6760	Daily battery charge energy from PV - Day 18		kWh	uint16be	1	0.1			value		false	false
+6761	Daily battery charge energy from PV - Day 19		kWh	uint16be	1	0.1			value		false	false
+6762	Daily battery charge energy from PV - Day 20		kWh	uint16be	1	0.1			value		false	false
+6763	Daily battery charge energy from PV - Day 21		kWh	uint16be	1	0.1			value		false	false
+6764	Daily battery charge energy from PV - Day 22		kWh	uint16be	1	0.1			value		false	false
+6765	Daily battery charge energy from PV - Day 23		kWh	uint16be	1	0.1			value		false	false
+6766	Daily battery charge energy from PV - Day 24		kWh	uint16be	1	0.1			value		false	false
+6767	Daily battery charge energy from PV - Day 25		kWh	uint16be	1	0.1			value		false	false
+6768	Daily battery charge energy from PV - Day 26		kWh	uint16be	1	0.1			value		false	false
+6769	Daily battery charge energy from PV - Day 27		kWh	uint16be	1	0.1			value		false	false
+6770	Daily battery charge energy from PV - Day 28		kWh	uint16be	1	0.1			value		false	false
+6771	Daily battery charge energy from PV - Day 29		kWh	uint16be	1	0.1			value		false	false
+6772	Daily battery charge energy from PV - Day 30		kWh	uint16be	1	0.1			value		false	false
+6773	Daily battery charge energy from PV - Day 31		kWh	uint16be	1	0.1			value		false	false
+6774	Monthly battery charge energy from PV - January		kWh	uint16be	1	0.1			value		false	false
+6775	Monthly battery charge energy from PV - February		kWh	uint16be	1	0.1			value		false	false
+6776	Monthly battery charge energy from PV - March		kWh	uint16be	1	0.1			value		false	false
+6777	Monthly battery charge energy from PV - April		kWh	uint16be	1	0.1			value		false	false
+6778	Monthly battery charge energy from PV - May		kWh	uint16be	1	0.1			value		false	false
+6779	Monthly battery charge energy from PV - June		kWh	uint16be	1	0.1			value		false	false
+6780	Monthly battery charge energy from PV - July		kWh	uint16be	1	0.1			value		false	false
+6781	Monthly battery charge energy from PV - August		kWh	uint16be	1	0.1			value		false	false
+6782	Monthly battery charge energy from PV - September		kWh	uint16be	1	0.1			value		false	false
+6783	Monthly battery charge energy from PV - October		kWh	uint16be	1	0.1			value		false	false
+6784	Monthly battery charge energy from PV - November		kWh	uint16be	1	0.1			value		false	false
+6785	Monthly battery charge energy from PV - December		kWh	uint16be	1	0.1			value		false	false
+6786	Yearly battery charge energy from PV - Year 1	2030	kWh	uint32sw	2	0.1			value		false	false
+6788	Yearly battery charge energy from PV - Year 2	2031	kWh	uint32sw	2	0.1			value		false	false
+6790	Yearly battery charge energy from PV - Year 3	2032	kWh	uint32sw	2	0.1			value		false	false
+6792	Yearly battery charge energy from PV - Year 4	2033	kWh	uint32sw	2	0.1			value		false	false
+6794	Yearly battery charge energy from PV - Year 5	2034	kWh	uint32sw	2	0.1			value		false	false
+6796	Yearly battery charge energy from PV - Year 6	2035	kWh	uint32sw	2	0.1			value		false	false
+6798	Yearly battery charge energy from PV - Year 7	2036	kWh	uint32sw	2	0.1			value		false	false
+6800	Yearly battery charge energy from PV - Year 8	2037	kWh	uint32sw	2	0.1			value		false	false
+6802	Yearly battery charge energy from PV - Year 9	2038	kWh	uint32sw	2	0.1			value		false	false
+6804	Yearly battery charge energy from PV - Year 10	2024	kWh	uint32sw	2	0.1			value		false	false
+6806	Yearly battery charge energy from PV - Year 11	2025	kWh	uint32sw	2	0.1			value		false	false
+6808	Yearly battery charge energy from PV - Year 12	2026	kWh	uint32sw	2	0.1			value		false	false
+6810	Yearly battery charge energy from PV - Year 13	2027	kWh	uint32sw	2	0.1			value		false	false
+6812	Yearly battery charge energy from PV - Year 14	2028	kWh	uint32sw	2	0.1			value		false	false
+6814	Yearly battery charge energy from PV - Year 15	2029	kWh	uint32sw	2	0.1			value		false	false
+6816	Yearly battery charge energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6818	Yearly battery charge energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6820	Yearly battery charge energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6822	Yearly battery charge energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+6824	Yearly battery charge energy from PV - reserved		kWh	uint32sw	2	0.1			value		false	false
+12999	Running state	Refer to Appendix 4.1		uint16be	1				value		false	false
+13000	Power Flow Status	Refer to Appendix 4.2		uint16be	1				value		false	false
+13001	Daily PV Generation	Electricity generated by the inverter through the PV module on the day	kWh	uint16be	1	0.1			value		false	false
+13002	Total PV Generation	Total electricity generated by the inverter through the PV module	kWh	uint32sw	2	0.1			value		false	false
+13004	Daily export power from PV	Electricity delivered by the inverter to power grid through the PV module on the day	kWh	uint16be	1	0.1			value		false	false
+13005	Total export energy from PV	Total electricity delivered by the inverter to power grid through the PV module	kWh	uint32sw	2	0.1			value		false	false
+13007	Load power	Power consumed by loads	W	int32sw	2				value		false	false
+13009	Export power	Power delivered by the inverter to power grid	W	int32sw	2				value		false	false
+13011	Daily battery charge energy from PV	Electricity that the inverter charges the batteries through the PV module on the day	kWh	uint16be	1	0.1			value		false	false
+13012	Total battery charge energy from PV	Total electricity that the inverter charges the batteries through the PV module	kWh	uint32sw	2	0.1			value		false	false
+13016	Daily direct energy consumption	Electricity taken from PV module by loads on the day 	kWh	uint16be	1	0.1			value		false	false
+13017	Total direct energy consumption	Accumulated electricity taken by the inverter from the PV module	kWh	uint32sw	2	0.1			value		false	false
+13019	Battery voltage		V	uint16be	1	0.1			value		false	false
+13020	Battery current		A	uint16be	1	0.1			value		false	false
+13021	Battery power		W	uint16be	1				value		false	false
+13022	Battery level		%	uint16be	1	0.1			value		false	false
+13023	Battery state of health		%	uint16be	1	0.1			value		false	false
+13024	Battery temperature		°C	int16be	1	0.1			value		false	false
+13025	Daily battery discharge energy		kWh	uint16be	1	0.1			value		false	false
+13026	Total battery discharge energy		kWh	uint32sw	2	0.1			value		false	false
+13028	Self-consumption of today		%	uint16be	1	0.1			value		false	false
+13030	Phase A current	Output type (address 5002) is 0: only phase A current is uploaded; 1 or 2: current of corresponding phases is uploaded	A	int16be	1	0.1			value		false	false
+13031	Phase B current	Output type (address 5002) is 0: only phase A current is uploaded; 1 or 2: current of corresponding phases is uploaded	A	int16be	1	0.1			value		false	false
+13032	Phase C current	Output type (address 5002) is 0: only phase A current is uploaded; 1 or 2: current of corresponding phases is uploaded	A	int16be	1	0.1			value		false	false
+13033	Total active power		W	int32sw	2				value		false	false
+13035	Daily Import Energy		kWh	uint16be	1	0.1			value		false	false
+13036	Total Import Energy		kWh	uint32sw	2	0.1			value		false	false
+13038	Battery Capacity	Li-ion: 0.1kWh; Lead-acid: 1Ah - Applicable types: SH5.0-10.0RT, SH8.0-10RS 	kWh	uint16be	1	0.1			value		false	false
+13039	Daily Charge Energy	Total charge of batteries on the day	kWh	uint16be	1	0.1			value		false	false
+13040	Total Charge Energy	Accumulated charge of batteries	kWh	uint32sw	2	0.1			value		false	false
+13042	DRM State	1~9: DRM0~DRM8; Other Value: Invalid		uint16be	1				value		false	false
+13044	Daily export energy	Electricity delivered by the inverter to power grid through the PV module or batteries on the day	kWh	uint16be	1	0.1			value		false	false
+13045	Total export energy	Accumulated electricity delivered by the inverter to power grid through the PV module or batteries	kWh	uint32sw	2	0.1			value		false	false
+13049	Inverter alarm	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13051	Grid-side fault	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13053	System fault 1	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13055	System fault 2	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13057	DC-side fault	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13059	Permanent fault	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13061	BDC-side fault	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13063	BDC-side permanent fault	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13065	Battery fault	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13067	Battery alarm	Refer to Appendix 4.3		uint32sw	2				value		false	false
+13069	BMS alarm	Refer to Appendix 4.4		uint32sw	2				value		false	false
+13071	BMS protection	Refer to Appendix 4.4		uint32sw	2				value		false	false
+13073	BMS fault 1	Refer to Appendix 4.4		uint32sw	2				value		false	false
+13075	BMS fault 2	Refer to Appendix 4.4		uint32sw	2				value		false	false
+13077	BMS alarm 2	Refer to Appendix 4.4		uint32sw	2				value		false	false
