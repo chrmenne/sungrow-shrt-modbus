@@ -1,0 +1,58 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+4999	System Clock Year	Systemzeit Jahr		uint16be	1				value		true	false	false	false
+5000	System Clock Month	Systemzeit Monat		uint16be	1				value		true	false	false	false
+5001	System Clock Day	Systemzeit Tag		uint16be	1				value		true	false	false	false
+5002	System Clock Hour	Systemzeit Stunde		uint16be	1				value		true	false	false	false
+5003	System Clock Minute	Systemzeit Minute		uint16be	1				value		true	false	false	false
+5004	System Clock Second	Systemzeit Sekunde		uint16be	1				value		true	false	false	false
+12999	Start/Stop	0xCF (207) Start ; 0xCE (206) Stop		uint16be	1				value		true	false	false	false
+13000	DO Configuration	0:Off;  1: Load Control Mode;  2: Grounding Fault  Indication;  3: MicroGrid System Mode		uint16be	1				value		true	false	false	false
+13001	Load Control mode	0: Timing mode; 1: ON/OFF mode; 2: Power optimized mode; 3: Disable		uint16be	1				value		true	false	false	false
+13002	Load 1 timing period 1: Start hour	0~23	h	uint16be	1				value		true	false	false	false
+13003	Load 1 timing period 1: Start minute	0~59	min	uint16be	1				value		true	false	false	false
+13004	Load 1 timing period 1: End hour	0~23	h	uint16be	1				value		true	false	false	false
+13005	Load 1 timing period 1: End minute	0~59	min	uint16be	1				value		true	false	false	false
+13006	Load 1 timing period 2: Start hour	0~23	h	uint16be	1				value		true	false	false	false
+13007	Load 1 timing period 2: Start minute	0~59	min	uint16be	1				value		true	false	false	false
+13008	Load 1 timing period 2: End hour	0~23	h	uint16be	1				value		true	false	false	false
+13009	Load 1 timing period 2: End minute	0~59	min	uint16be	1				value		true	false	false	false
+13010	Load 1 ON/OFF mode	0xAA (170) ON; 0x55 (88) OFF		uint16be	1				value		true	false	false	false
+13011	Load 1 power optimized mode: Start hour	0~23	h	uint16be	1				value		true	false	false	false
+13012	Load 1 power optimized mode: Start minute	0~59	min	uint16be	1				value		true	false	false	false
+13013	Load 1 power optimized mode: End hour	0~23	h	uint16be	1				value		true	false	false	false
+13014	Load 1 power optimized mode: End minute	0~59	min	uint16be	1				value		true	false	false	false
+13015	Optimized power of load 1	0~60000	W	uint16be	1				value		true	false	false	false
+13049	EMS mode selection	0: Self-consumption  mode (Default); 2: Forced mode; 3: External EMS mode; 4:VPP		uint16be	1				value		true	false	false	false
+13050	Charge/discharge command	0xAA (170) Charge; 0xBB (187) Discharge; 0xCC (204) Stop 		uint16be	1				value		true	false	false	false
+13051	Charge/discharge power	(1) 0~5000W  Default:1000W  (SH3.0-6.0RS); (2) 0-100% of BDC rated power (RO register 5628). Pay attention to Unit Coeff difference.(SH5.0 10.0RT) 	W	uint16be	1				value		true	false	false	false
+13056	Battery capacity	???	Ah	uint16be	1				value		true	false	false	false
+13057	Max. SOC	50.0~100.0	%	uint16be	1	0.1			value		true	false	false	false
+13058	Min. SOC	0.0~0.50.0	%	uint16be	1	0.1			value		true	false	false	false
+13059	Battery overvoltage threshold	???	V	int16be	1	0.1			value		true	false	false	false
+13060	Battery undervoltage threshold	???	V	int16be	1	0.1			value		true	false	false	false
+13061	Battery over temperature threshold	???	°C	int16be	1	0.1			value		true	false	false	false
+13062	Battery under temperature threshold	???	°C	int16be	1	0.1			value		true	false	false	false
+13073	Export power limitation		W	uint16be	1				value		true	false	false	false
+13074	Off-grid option	0xAA (170) Enable; 0x55 (88) Disable		uint16be	1				value		true	false	false	false
+13079	External EMS heartbeat	0~1000  Default: 20s	s	uint16be	1				value		true	false	false	false
+13085	Meter Comm. Detection	0xAA (170) Enable; 0x55 (88) Disable	W	uint16be	1				value		true	false	false	false
+13086	Export Power Limitation	0xAA (170) Enable; 0x55 (88) Disable		uint16be	1				value		true	false	false	false
+13099	Reserved SOC for backup 	0~100	%	uint16be	1				value		true	false	false	false
+31221	Feed-in Limitation - Wide Range		kW	uint16be	1	0.01			value		true	false	false	false
+33041	Charge Cutoff Voltage - Wide range		V	uint16be	1	0.1			value		true	false	false	false
+33046	Max. Charging Power	1~1060	kW	uint16be	1	0.01			value		true	false	false	false
+33047	Max. Discharging Power	1~1060	kW	uint16be	1	0.01			value		true	false	false	false
+33147	Charging/Discharging Power - Wide range		kW	uint16be	1	0.01			value		true	false	false	false
+33207	Forced Charging	0xAA (170) Enable; 0x55 (88) Disable		uint16be	1				value		true	false	false	false
+33208	Forced Charging Valid Time	0: weekday; 1: every Day		uint16be	1				value		true	false	false	false
+33209	Forced Charging Start Time 1(h)	0~23	h	uint16be	1				value		true	false	false	false
+33210	Forced Charging Start Time 1 (min)	0~59	min	uint16be	1				value		true	false	false	false
+33211	Forced Charging End Time 1 (h)	0~23	h	uint16be	1				value		true	false	false	false
+33212	Forced Charging End Time 1 (min)	0~59	min	uint16be	1				value		true	false	false	false
+33213	Forced Charging Target SOC1	0~100	%	uint16be	1				value		true	false	false	false
+33214	Forced Charging Start Time 2 (h)	0~23	h	uint16be	1				value		true	false	false	false
+33215	Forced Charging Start Time 2 (min)	0~59	min	uint16be	1				value		true	false	false	false
+33216	Forced Charging End Time 2 (h)	0~23	h	uint16be	1				value		true	false	false	false
+33217	Forced Charging End Time 2 (min)	0~59	min	uint16be	1				value		true	false	false	false
+33218	Forced Charging Target SOC 2	0~100	%	uint16be	1				value		true	false	false	false
+33273	Load Rated Power	0~60000	kW	uint16be	1	0.01			value		true	false	false	false
